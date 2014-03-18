@@ -51,7 +51,7 @@ class Player(physicalobject.PhysicalObject):
             self.engine_sprite.visible = False
     
     def on_key_press(self, symbol, modifiers):
-        if symbol == key.SPACE:
+        if symbol == key.SPACE and self.dead == False:
             self.fire()
     
     def fire(self):
